@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8061/eureka/
+      defaultZone: http://10.10.2.113:8061/eureka/
 
 logging:
   pattern:
@@ -27,12 +27,12 @@ spring:
             enable: true
           debug: false
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://10.10.2.113:9411
   sleuth:
     sampler:
       probability: 1.0
   kafka:
-    bootstrap-servers: localhost:29092
+    bootstrap-servers: 10.10.2.113:29092
 
 #QRCode Telegram
 qrcode:
