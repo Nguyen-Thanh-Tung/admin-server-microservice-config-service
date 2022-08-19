@@ -22,7 +22,7 @@ spring:
     username: tung
     url: jdbc:mysql://10.10.2.113:3306/account_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
   zipkin:
-    base-url: http://10.10.2.113:9411
+    base-url: http://10.10.2.113:9415
   sleuth:
     sampler:
       probability: 1.0
