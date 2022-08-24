@@ -2,9 +2,14 @@ server:
   port: 8092
 
 eureka:
+  instance:
+    preferIpAddress: true
+    hostname: eureka-0
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
-      defaultZone: http://10.10.2.113:8071/eureka/
+      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8071/eureka
 
 logging:
   pattern:
