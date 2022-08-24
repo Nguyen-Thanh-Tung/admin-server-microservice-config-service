@@ -27,12 +27,12 @@ spring:
             enable: true
           debug: false
   zipkin:
-    base-url: http://10.10.2.113:9411
+    base-url: ${ZIPKIN_SERVER_ADDRESS}
   sleuth:
     sampler:
       probability: 1.0
   kafka:
-    bootstrap-servers: 10.10.2.113:29092
+    bootstrap-servers: ${KAFKA_SERVER_ADDRESS}
 
 #QRCode Telegram
 qrcode:

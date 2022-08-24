@@ -98,7 +98,7 @@ spring:
   main:
     web-application-type: reactive
   zipkin:
-    base-url: http://10.10.2.113:9411
+    base-url: ${ZIPKIN_SERVER_ADDRESS}
   sleuth:
     sampler:
       probability: 1.0
