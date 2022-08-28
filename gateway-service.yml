@@ -4,12 +4,12 @@ server:
 eureka:
   instance:
     preferIpAddress: true
-    hostname: k8n-discovery-service-0
+    hostname: k8s-discovery-service-0
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://k8n-discovery-service-0.discovery-service.default.svc.cluster.local:8071/eureka
+      defaultZone: http://k8s-discovery-service-0.discovery-service.default.svc.cluster.local:8071/eureka
 
 logging:
   pattern:
@@ -109,7 +109,7 @@ spring:
       probability: 1.0
 
 cors:
-  allow: http://10.10.2.113:3005,*
+  allow: *,*
 
 springdoc:
   swagger-ui:
