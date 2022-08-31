@@ -23,8 +23,8 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    password: 123456
-    username: tung
+    password: ${DATABASE_PASSWORD}
+    username: ${DATABASE_USERNAME}
     url: jdbc:mysql://${DATABASE_SERVER_ADDRESS}/account_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
   zipkin:
     base-url: ${ZIPKIN_SERVER_ADDRESS}
@@ -36,14 +36,14 @@ spring:
 
 system:
   supperAdmin:
-    fullname: admin
-    username: admin
-    email: admin@gmail.com
-    password: Admin@123
-    organization: Comit
+    fullname: ${SUPERADMIN_FULLNAME}
+    username: ${SUPERADMIN_USERNAME}
+    email: ${SUPERADMIN_EMAIL}
+    password: ${SUPERADMIN_PASSWORD}
+    organization: ${SUPERADMIN_ORGANIZATION}
 frontend:
   server: ${CHANGE_PASSWORD_URL}
 
 app:
   jwtExpirationInMs: 1209600000
-  jwtSecret: comit_admin
+  jwtSecret: ${JWT_SECRET}

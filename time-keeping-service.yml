@@ -21,9 +21,9 @@ springdoc:
 
 spring:
   datasource:
-    username: tung
+    username: ${DATABASE_USERNAME}
     url: jdbc:mysql://${DATABASE_SERVER_ADDRESS}/time_keeping_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
-    password: 123456
+    password: ${DATABASE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
