@@ -23,8 +23,8 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    password: Admin@123
-    username: admin
+    password: ${DATABASE_PASSWORD}
+    username: ${DATABASE_USERNAME}
     url: jdbc:mysql://${DATABASE_SERVER_ADDRESS}/account_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
   zipkin:
     base-url: ${ZIPKIN_SERVER_ADDRESS}
