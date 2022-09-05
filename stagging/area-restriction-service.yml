@@ -1,0 +1,33 @@
+server:
+  port: 8086
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: k8s-discovery-service-0
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://k8s-discovery-service-0.discovery-service.default.svc.cluster.local:8071/eureka
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+springdoc:
+  packagesToScan: com.comit.services.areaRestriction
+
+spring:
+  datasource:
+    username: ${DATABASE_USERNAME}
+    url: jdbc:mysql://${DATABASE_SERVER_ADDRESS}/area_restriction_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  zipkin:
+    base-url: ${ZIPKIN_SERVER_ADDRESS}
+  sleuth:
+    sampler:
+      probability: 1.0

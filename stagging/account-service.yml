@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: k8s-discovery-service-0
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://k8s-discovery-service-0.discovery-service.default.svc.cluster.local:8071/eureka
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+springdoc:
+  packagesToScan: com.comit.services.account
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    password: ${DATABASE_PASSWORD}
+    username: ${DATABASE_USERNAME}
+    url: jdbc:mysql://${DATABASE_SERVER_ADDRESS}/account_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+  zipkin:
+    base-url: ${ZIPKIN_SERVER_ADDRESS}
+  sleuth:
+    sampler:
+      probability: 1.0
+  kafka:
+    bootstrap-servers: ${KAFKA_SERVER_ADDRESS}
+
+system:
+  supperAdmin:
+    fullname: ${SUPERADMIN_FULLNAME}
+    username: ${SUPERADMIN_USERNAME}
+    email: ${SUPERADMIN_EMAIL}
+    password: ${SUPERADMIN_PASSWORD}
+    organization: ${SUPERADMIN_ORGANIZATION}
+frontend:
+  server: ${CHANGE_PASSWORD_URL}
+
+app:
+  jwtExpirationInMs: 1209600000
+  jwtSecret: ${JWT_SECRET}

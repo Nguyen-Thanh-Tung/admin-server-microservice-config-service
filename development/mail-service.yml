@@ -1,0 +1,41 @@
+server:
+  port: 8085
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8071/eureka/
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+springdoc:
+  packagesToScan: com.comit.services.mail
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: sinhvienitpro95@gmail.com
+    password: zajgpbjjcxxhvtjn
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          debug: false
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+  kafka:
+    bootstrap-servers: localhost:29092
+
+#QRCode Telegram
+qrcode:
+  image:
+    url: https://drive.google.com/uc?export=view&id=1VMcOxFtm0aePzWOGz-cwOugR0tu8heG4
+  url: t.me/ComitBot
