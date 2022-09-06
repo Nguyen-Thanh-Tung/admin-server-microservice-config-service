@@ -36,8 +36,6 @@ system:
     email: admin@gmail.com
     password: Admin@123
     organization: Comit
-frontend:
-  server: http://localhost:3005/authentication/change-password
 
 app:
   jwtExpirationInMs: 1209600000
