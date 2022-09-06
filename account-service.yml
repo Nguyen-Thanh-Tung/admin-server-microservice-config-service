@@ -41,8 +41,6 @@ system:
     email: ${SUPERADMIN_EMAIL}
     password: ${SUPERADMIN_PASSWORD}
     organization: ${SUPERADMIN_ORGANIZATION}
-frontend:
-  server: ${CHANGE_PASSWORD_URL}
 
 app:
   jwtExpirationInMs: 1209600000
