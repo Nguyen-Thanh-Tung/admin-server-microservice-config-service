@@ -104,7 +104,7 @@ spring:
       probability: 1.0
 
 cors:
-  allow: http://localhost:3005,*
+  allow: *
 
 springdoc:
   swagger-ui:
