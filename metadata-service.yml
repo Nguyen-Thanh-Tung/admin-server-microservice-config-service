@@ -26,3 +26,11 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+#Storage
+  storage:
+    host: http://localhost
+    folder: /Users/nguyentung/Desktop/Project/GSTTAN/admin_server/file_uploads
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB
