@@ -31,6 +31,6 @@ spring:
 
 core:
   api:
-    add-employee-image: http://10.10.2.112:5678/embedding/
-    update-employee-image: http://10.10.2.112:5678/embedding
-    delete-employee-image: http://10.10.2.112:5678/embedding
+    add-employee-image: http://192.168.6.117:5678/embedding/
+    update-employee-image: http://192.168.6.117:5678/embedding
+    delete-employee-image: http://192.168.117:5678/embedding

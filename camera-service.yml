@@ -29,4 +29,4 @@ spring:
 
 core:
   api:
-    check-camera: http://10.10.2.116:5678/camera/check_cameras
+    check-camera: http://192.168.6.117:5677/camera/check_cameras
