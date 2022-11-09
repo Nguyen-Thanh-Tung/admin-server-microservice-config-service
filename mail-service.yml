@@ -43,3 +43,6 @@ qrcode:
 #Frontend server
 frontend:
   server: http://localhost:3005/authentication/change-password
+
+app:
+  internalToken: YWRtaW4vQWRtaW5AMTIz

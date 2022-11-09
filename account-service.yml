@@ -40,3 +40,4 @@ system:
 app:
   jwtExpirationInMs: 1209600000
   jwtSecret: comit_admin
+  internalToken: YWRtaW4vQWRtaW5AMTIz

@@ -30,3 +30,5 @@ spring:
 core:
   api:
     check-camera: http://192.168.6.117:5677/camera/check_cameras
+app:
+  internalToken: YWRtaW4vQWRtaW5AMTIz
