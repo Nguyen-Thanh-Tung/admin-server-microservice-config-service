@@ -39,3 +39,5 @@ spring:
     multipart:
       max-file-size: 100MB
       max-request-size: 1000MB
+app:
+  internalToken: YWRtaW4vQWRtaW5AMTIz

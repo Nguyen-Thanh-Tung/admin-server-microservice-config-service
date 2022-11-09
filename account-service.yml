@@ -45,3 +45,4 @@ system:
 app:
   jwtExpirationInMs: 1209600000
   jwtSecret: ${JWT_SECRET}
+  internalToken: YWRtaW4vQWRtaW5AMTIz

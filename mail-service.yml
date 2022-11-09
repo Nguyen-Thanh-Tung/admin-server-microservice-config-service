@@ -48,3 +48,5 @@ qrcode:
 #Frontend Server
 frontend:
   server: ${CHANGE_PASSWORD_URL}
+app:
+  internalToken: YWRtaW4vQWRtaW5AMTIz

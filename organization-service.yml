@@ -34,3 +34,5 @@ spring:
 system:
   supperAdmin:
     organization: Comit
+app:
+  internalToken: YWRtaW4vQWRtaW5AMTIz

@@ -39,3 +39,5 @@ core:
     add-employee-image: ${ACTION_EMPLOYEE_IMAGE_URL}/
     update-employee-image: ${ACTION_EMPLOYEE_IMAGE_URL}
     delete-employee-image: ${ACTION_EMPLOYEE_IMAGE_URL}
+app:
+  internalToken: YWRtaW4vQWRtaW5AMTIz

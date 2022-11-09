@@ -35,3 +35,6 @@ spring:
 core:
   api:
     check-camera: ${CHECK_CAMERA_URL}
+
+app:
+  internalToken: YWRtaW4vQWRtaW5AMTIz
