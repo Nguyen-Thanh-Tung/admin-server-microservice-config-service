@@ -94,6 +94,12 @@ spring:
         - Path=/features/**
         filters:
         - RewritePath=/features/(?<path>.*), /$\{path}
+      - id: mail-service
+        uri: lb://mail-service
+        predicates:
+        - Path=/mails/**
+        filters:
+        - RewritePath=/mails/(?<path>.*), /$\{path}
       - id: openapi
         uri: http://10.10.2.113:${server.port}
         predicates:
