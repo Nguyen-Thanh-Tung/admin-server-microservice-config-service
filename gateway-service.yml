@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.6.113:8071/eureka/
+      defaultZone: http://localhost:8071/eureka/
 
 logging:
   pattern:
@@ -90,7 +90,7 @@ spring:
         filters:
         - RewritePath=/features/(?<path>.*), /$\{path}
       - id: openapi
-        uri: http://192.168.6.113:${server.port}
+        uri: http://localhost:${server.port}
         predicates:
         - Path=/v3/api-docs/**
         filters:
@@ -104,13 +104,13 @@ spring:
   main:
     web-application-type: reactive
   zipkin:
-    base-url: http://192.168.6.113:9411
+    base-url: http://localhost:9411
   sleuth:
     sampler:
       probability: 1.0
 
 cors:
-  allow: http://192.168.6.113:3005,*
+  allow: http://localhost:3005,*
 
 spring.cloud.gateway.routes:
   - id: mail-service
