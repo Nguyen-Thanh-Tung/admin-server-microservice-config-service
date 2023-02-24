@@ -22,8 +22,23 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
+    main:
+      username: ${MAIL_USERNAME}
+      password: ${MAIL_PASSWORD}
+    area:
+      primary:
+        username: ${MAIL_AREA_PRIMARY_USERNAME}
+        password: ${MAIL_AREA_PRIMARY_PASSWORD}
+      secondary:
+        username: ${MAIL_AREA_SECONDARY_USERNAME}
+        password: ${MAIL_AREA_SECONDARY_PASSWORD}
+    tk:
+      primary:
+        username: ${MAIL_TK_PRIMARY_USERNAME}
+        password: ${MAIL_TK_PRIMARY_PASSWORD}
+      secondary:
+        username: ${MAIL_TK_SECONDARY_USERNAME}
+        password: ${MAIL_TK_SECONDARY_PASSWORD}
     properties:
       mail:
         smtp:
