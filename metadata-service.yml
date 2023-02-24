@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8071/eureka/
+      defaultZone: http://192.168.6.113:8071/eureka/
 
 logging:
   pattern:
@@ -16,19 +16,19 @@ springdoc:
 spring:
   datasource:
     username: tung
-    url: jdbc:mysql://localhost:3306/metadata_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://192.168.6.113:3306/metadata_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
     password: 123456
   jpa:
     hibernate:
       ddl-auto: update
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://192.168.6.113:9411
   sleuth:
     sampler:
       probability: 1.0
 #Storage
   storage:
-    host: http://localhost
+    host: http://192.168.6.113
     folder: /Users/nguyentung/Desktop/Project/GSTTAN/admin_server/file_uploads
   servlet:
     multipart:

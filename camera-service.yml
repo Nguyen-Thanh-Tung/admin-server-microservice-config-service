@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8071/eureka/
+      defaultZone: http://192.168.6.113:8071/eureka/
 
 logging:
   pattern:
@@ -16,19 +16,19 @@ springdoc:
 spring:
   datasource:
     username: tung
-    url: jdbc:mysql://localhost:3306/camera_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://192.168.6.113:3306/camera_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
     password: 123456
   jpa:
     hibernate:
       ddl-auto: update
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://192.168.6.113:9411
   sleuth:
     sampler:
       probability: 1.0
 
 core:
   api:
-    check-camera: http://192.168.6.117:5677/camera/check_cameras
+    check-camera: http://10.10.2.201:5677/camera/check_cameras
 app:
   internalToken: YWRtaW4vQWRtaW5AMTIz
