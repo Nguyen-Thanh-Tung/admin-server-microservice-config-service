@@ -17,8 +17,23 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: sinhvienitpro95@gmail.com
-    password: zajgpbjjcxxhvtjn
+    main:
+      username: sinhvienitpro95@gmail.com
+      password: zajgpbjjcxxhvtjn
+    area:
+      primary:
+        username: jacsonamericano@gmail.com
+        password: lvwnobpvybezitml
+      secondary:
+        username: jettysonamericano@gmail.com
+        password: fnnhgxeyjbotonys
+    tk:
+      primary:
+        username: jacsonamericano@gmail.com
+        password: lvwnobpvybezitml
+      secondary:
+        username: jettysonamericano@gmail.com
+        password: fnnhgxeyjbotonys
     properties:
       mail:
         smtp:
