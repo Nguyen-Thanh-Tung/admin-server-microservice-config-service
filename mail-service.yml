@@ -50,9 +50,9 @@ spring:
     username: tung
     url: jdbc:mysql://${DATABASE_SERVER_ADDRESS}/mail_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
     password: ${DATABASE_PASSWORD}
-    jpa:
-      hibernate:
-        ddl-auto: update
+  jpa:
+    hibernate:
+      ddl-auto: update
   zipkin:
     base-url: ${ZIPKIN_SERVER_ADDRESS}
   sleuth:
