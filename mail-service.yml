@@ -1,5 +1,5 @@
 server:
-  port: 8085
+  port: 8000
 
 eureka:
   instance:
@@ -47,7 +47,7 @@ spring:
             enable: true
           debug: false
   datasource:
-    username: tung
+    username: ${DATABASE_USERNAME}
     url: jdbc:mysql://${DATABASE_SERVER_ADDRESS}/mail_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
     password: ${DATABASE_PASSWORD}
   jpa:
