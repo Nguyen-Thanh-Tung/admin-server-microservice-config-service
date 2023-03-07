@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: 192.168.6.113
+    hostname: 192.168.6.114
   client:
     registerWithEureka: false
     fetchRegistry: false
@@ -12,7 +12,7 @@ eureka:
 
 spring:
   zipkin:
-    base-url: http://192.168.6.113:9411
+    base-url: http://192.168.6.114:9411
   sleuth:
     sampler:
       probability: 1.0
